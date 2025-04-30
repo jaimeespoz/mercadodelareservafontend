@@ -1,0 +1,17 @@
+
+###
+
+POST http://localhost:4000/api/jwt/token
+    Content-Type: application/json
+
+{
+    "username":"jespoz@outlook.es",
+    "password":"1234"
+}
+
+###
+
+GET http://localhost:4000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUGFvIiwiaWF0IjoxNzQxMzY2MzcwLCJleHAiOjE3NDEzNjY5NzB9.ahtd-TL53iMKij1Y2_xUgbQis7vRGptT2XWHinpx1B0
+
+###

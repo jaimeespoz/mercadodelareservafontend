@@ -1,0 +1,45 @@
+### Get All
+
+GET http://localhost:4000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NDI1NzIwMDMsImV4cCI6MTc0MjU3MjYwM30.gn9Hpg7iqDJH7lgVA60MlywnRxQ0D2iL4d8lpl41oRI
+
+
+### Get One
+
+GET http://localhost:4000/api/users/Jea3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NDI1NzIwMDMsImV4cCI6MTc0MjU3MjYwM30.gn9Hpg7iqDJH7lgVA60MlywnRxQ0D2iL4d8lpl41oRi
+
+### Save One
+
+POST http://localhost:4000/api/users
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NDI1NzIwMDMsImV4cCI6MTc0MjU3MjYwM30.gn9Hpg7iqDJH7lgVA60MlywnRxQ0D2iL4d8lpl41oRi
+
+{
+    "username":"Jea4",
+    "email":"jespoz@outlook.es",
+    "password":"1234"
+}
+
+
+###
+
+PUT http://localhost:4000/api/users
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NDI1NzIwMDMsImV4cCI6MTc0MjU3MjYwM30.gn9Hpg7iqDJH7lgVA60MlywnRxQ0D2iL4d8lpl41oRi
+
+{
+    "username":"Jea4",
+    "email":"jespoz@outlook.es",
+    "password":"4312aabb"
+}
+
+###
+
+DELETE http://localhost:4000/api/users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NDI1NzIwMDMsImV4cCI6MTc0MjU3MjYwM30.gn9Hpg7iqDJH7lgVA60MlywnRxQ0D2iL4d8lpl41oRi
+
+ {
+    "username":"Jea4"
+}
