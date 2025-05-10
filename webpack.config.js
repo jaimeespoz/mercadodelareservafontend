@@ -51,7 +51,7 @@ module.exports = {
     },
 
     plugins: [
-        new webpack.ProgressPlugin(handler),
+        // new webpack.ProgressPlugin(handler),
         new HtmlWebpackPlugin({
             title: 'Development',
             template: './src/template.html',
