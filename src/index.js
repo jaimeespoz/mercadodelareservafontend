@@ -14,7 +14,7 @@ import { login } from './pages/login/index';
 
 // const /* {HTMLElement} */ ventaGaragePage = document.createElement('div');
 // ventaGaragePage.innerHTML = `
-//     <div class="container" data-container>
+//     <div class="container">
 //         <div class="text-title-large">Inicio de Sesion</div>
 //         <form id="form-book" class="input-container">
 //             <div class="input-group">

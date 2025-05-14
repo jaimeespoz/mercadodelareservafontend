@@ -12,39 +12,42 @@ const /* {JSON | undefined} */ $password = localStorage.getItem('password');
 const login = function () {
     const loginPage = document.createElement('div');
     loginPage.innerHTML = `
-     <div class="container">
-        <div class="container-login" data-container>
-            <div class="text-title-large">Inicio de Sesion</div>
-            <form id="form-book" class="input-container">
-                <div class="input-group">
-                    <span class="material-symbols-rounded" aria-hidden="true">mail</span>
-                    <input id="username" autocomplete="off" type="email" class="text-label-medium"
-                        placeholder="ingrese su correo" data-email>
-                </div>
-                <div data-email-error class="error"></div>
+    <div class="page-login">
+        <div class="container">
+            <div class="container-login">
+                <div class="text-title-large">Inicio de Sesion</div>
+                <form id="form-book" class="input-container">
+                    <div class="input-group">
+                        <span class="material-symbols-rounded" aria-hidden="true">mail</span>
+                        <input id="username" autocomplete="off" type="email" class="text-label-medium"
+                            placeholder="ingrese su correo" data-email>
+                    </div>
+                    <div data-email-error class="error"></div>
 
-                <div class="input-group">
-                    <span class="material-symbols-rounded" aria-hidden="true">lock</span>
-                    <input id="password" autocomplete="off" type="password" class="text-label-medium"
-                        placeholder="ingrese su clave" data-password>
-                </div>
-                <div data-password-error class="error"></div>
+                    <div class="input-group">
+                        <span class="material-symbols-rounded" aria-hidden="true">lock</span>
+                        <input id="password" autocomplete="off" type="password" class="text-label-medium"
+                            placeholder="ingrese su clave" data-password>
+                    </div>
+                    <div data-password-error class="error"></div>
 
-                <div data-books-cards></div>
+                    <div data-books-cards></div>
 
-                <div>
-                    <button type="submit" data-btnContinuar class="btn text-label-medium">Continuar</button>
+                    <div>
+                        <button type="submit" data-btnContinuar class="btn text-label-medium">Continuar</button>
+                    </div>
+                </form>
+                <div class="input-footer">
+                    <a href="#"><span class="text-label-small" data-olvido-clave-btn>Olvido su Clave de
+                            Acceso</span></a>
+                    <a href="#"><span class="text-label-small" data-registrarse-btn>Crear una Cuenta Nueva</span></a>
                 </div>
-            </form>
-            <div class="input-footer">
-                <a href="#"><span class="text-label-small" data-olvido-clave-btn>Olvido su Clave de Acceso</span></a>
-                <a href="#"><span class="text-label-small" data-registrarse-btn>Crear una Cuenta Nueva</span></a>
+            </div>
+            <div class="container-contexto">
+                <span>Hola html</span>
             </div>
         </div>
-        <div class="container-contexto">
-            <span>Hola login</span>
-        </div>
-    </div> 
+    </div>
         `;
 
     // document.body.append(bookCardContainer);

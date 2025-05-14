@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
+    --bs-body-color: #212529;
+    --bs-body-bg: #fff;
+    --bs-border-color: #dee2e6;
+    --bs-border-width: 1px;
+    --bs-border-radius: 0.375rem;
+
     --primary-color-hue: 252;
     --dark-color-lightness: 17%;
     --light-color-lightness: 95%;
@@ -16,7 +22,7 @@
     --color-dark: hsl(252, 30%, var(--dark-color-lightness));
     --color-black: hsl(252, 30%, 10%);
 
-    --border-radius: 2rem;
+    --border-radius: 2px;
     --card-border-radius: 1rem;
     --btn-padding: 0.6rem 2rem;
     --search-padding: 0.6rem 1rem;
@@ -688,62 +694,67 @@ input::placeholder {
     /* color: black; */
 }
 
-.contenedor {
-    justify-content: center;
-    /* margin: 0px 36px; */
-    width: 100%;
+.container {
+    display: flex;
+    flex-direction: row;
 }
 
-.contenido {
+/* .contenedor {
+    justify-content: center;
+    margin: 0px 36px;
+    width: 100%;
+} */
+
+/* .contenido {
     justify-content: center;
     margin: 0px 12px;
-}
+} */
 
-.border {
+/* .border {
     border: solid 1px rgb(230, 230, 230);
     border-radius: 8px;
-}
+} */
 
-.col-dos {
+/* .col-dos {
     margin: 12px 6px;
     flex-basis: 100%;
-}
+} */
 
-.col-dos-imagen {
+/* .col-dos-imagen {
     margin: 0 auto;
     width: 100%;
     height: 160px;
-}
+} */
 
-.logo-mediano {
+/* .logo-mediano {
     width: 60px;
     height: 60px;
-}
+} */
 
-.logo-chico {
+/* .logo-chico {
     width: 42px;
     height: 42px;
-}
+} */
 
-.pad-titulo {
+/* .pad-titulo {
     padding: 12px 8px;
-}
+} */
 
-.pad-texto {
+/* .pad-texto {
     padding: 12px 8px;
-}
+} */
 
-.cardo {
+/* .cardo {
     position: relative;
     border-radius: 1rem;
     overflow: hidden;
-}
+} */
 
-.formulario {
+/* .formulario {
     padding: 24px;
-}
+} */
 
-.card__modal {
+/* .card__modal {
     position: absolute;
     left: 0;
     bottom: -44%;
@@ -755,22 +766,22 @@ input::placeholder {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
+} */
 
-.card__modal p {
+/* .card__modal p {
     margin: 0;
     padding: 0 18px;
     font-size: 0.813rem;
     color: rgb(250, 250, 250);
-}
+} */
 
-.modal-text {
+/* .modal-text {
     height: 120px;
     width: 100%;
     color: #34495e;
     overflow-y: auto;
     margin-block-end: 16px;
-}
+} */
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -778,31 +789,31 @@ input::placeholder {
 
 /*=============== BREAKPOINTS ===============*/
 @media screen and (max-width: 360px) {
-    .contenido {
+    /* .contenido {
         justify-content: center;
         padding: 12px;
-    }
+    } */
 }
 
 @media screen and (max-width: 390px) {
-    .contenido {
+    /* .contenido {
         justify-content: center;
         padding: 12px;
-    }
+    } */
 }
 
 /* ----------------------------------------------- */
-.profile-photo {
+/* .profile-photo {
     width: 2.7rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
     overflow: hidden;
-}
+} */
 
-img {
+/* img {
     display: block;
     width: 100%;
-}
+} */
 
 .btn {
     display: inline-block;
@@ -812,6 +823,8 @@ img {
     cursor: pointer;
     transition: all 300ms ease;
     font-size: 0.9rem;
+    /* background-color: rgba(31, 35, 40, 1); */
+    background-color: var(--btn-back-light);
 }
 
 .btn:hover {
@@ -854,3 +867,52 @@ img {
         width: 96%;
     }
 } */
+
+.error {
+    position: relative;
+    display: inline-block;
+    color: #c0392b;
+    font-size: 1.05rem;
+    line-height: 110%;
+    width: 80%;
+    text-align: center;
+    visibility: hidden;
+    transition: var(--tr-duration-short) var(--tr-easing-linear);
+    transition-property: visibility;
+}
+
+.error.active {
+    visibility: visible;
+}
+
+.form-label {
+    margin-bottom: 8px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 12px 18px;
+    /* font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5; */
+    color: var(--bs-body-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--bs-body-bg);
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    transition:
+        border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
